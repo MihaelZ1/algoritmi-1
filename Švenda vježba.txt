@@ -1,0 +1,8 @@
+1.	U polju sa 150 elemenata svaki parni broj zbroji sa sljedećim brojem a svaki neparni s prethodnim poljem
+2.	Pomoću polja 9x9 napravi kocku sa brojkom 0, te dijagonalu sa brojem koji unese korisnik, te sve ispod dijagonale sa n-1, a iznad dijagonale broj n+1.
+3.	Polje 7x5 ispuni random brojevima te za svaki stupac zamjeni prvi i zadnji broj, drugi i predzadnji broj itd.
+4.	Korisnik unosi n-petero znamenkastih brojeva te se u polju od nx5 ispiše težinska vrijednost svake znamenke (npr.54321= 50000,4000,300,20,1)
+5.	U random polju od 10x10 ispunjeno znakovima male engleske abecede, korisnik unosi slovo male engleske abecede i broj,te program ispiše koliko ga znakova koji su jednaki 
+unesenom znaku - uneseni broj i koliko ga znakova koji su jednaki unesenom znaku + uneseni broj  
+
+

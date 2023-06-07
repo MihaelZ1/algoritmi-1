@@ -1,0 +1,16 @@
+1. napisi program koji ucita 10 brojeva i stavi ih u polje, zatim napravi i ispisi novo polje u kojem se nalaze samo parni brojevi iz prethodng polja
+
+2. napisi program koji ucita znak i ispise 3 znaka nakon njega cija ascii vrijednost zavrsava sa brojem 2 (npr: 42, 52, 62)
+
+3. napisi program koji ispise 2d polje koje izgleda ovako (korisnik unosi duljinu i sirinu polja):
+
+# # # ! # # #
+# # # ! # # #
+# # # ! # # #
+# # # ! # # #
+# # # ! # # #
+# # # ! # # #
+
+4. provjeri sastoji li se niz upisanih brojeva od parova parnih i neparnih brojeva (22, 12, 9, 13, 6, 44, 11, 23)
+
+5. korisnik unosi brojeve i stavljas ih u polje, provjeri ponavlja li se neki broj dvaput za redom (5, 2, 4, 7, 7, 9) - ponavlja se

@@ -1,0 +1,9 @@
+1. Kriptiraj polje[15][15] cezarovim kodom za n pomaka. Broj pomaka unosi korisnik. Koriste se mala slova i ako krpitirano slovo prođe z vrati ga na a te nastavi.
+
+2. U polje [15][15] generiraj random brojeve. Program ispisuje zbroj stupaca i redaka
+
+3. U polje [10][10] generiraj random brojeve. Program ispisuje zbroj brojeva koji se nalaze iznad glavne diagonale i zbroj brojeva koji se nalaze ispod glavne diagonale
+
+4. U polje [15][15] generiraj random brojeve. Program ispisuje najmanji i najveci random generirani broj i ispisuje aritmetičku sredinu svih brojeva.
+
+5. U Polje[10][10] generiraj random brojeve. Zbroji sve brojeve na glavnoj dijagonali. Odredi njihovu aritmetičku sredinu, te usporedi aritmetičku sredinu sa aritmetičkom sredinom sporedne simetrale.

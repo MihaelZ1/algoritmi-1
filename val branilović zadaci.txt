@@ -1,0 +1,5 @@
+1. napiši program koji iz 2d polja 20x20 ispiše zbroj svakog redka i onda smanji zbroj unesengo redga sa zbrojem nekog drugog unesenog redka.
+2. napiši program koji u 2d polju nasumično postavi šahovske figure, bijele figure su označene malim slovima engleske abeceda a crne figure su označene velikim slovima engleske abcede, dvije figure ne smiju biti postavljene na isto           polje.
+3. napiši program koji iz 2d polje 10x10 zamijeni sve parne brojeve sa neparnim brojem koji je za 1 veći a sve neparne brojeve sa parnim brojem koji je za 1 manji.
+4. Napiši program koji niz od 100 nasumičnih brojeva pretvori u slova te neka korisnik unese neku riječ do 10 slova i program treba provijeriti ako se ta riječ nalazi u nizu.
+5. Napiši program u koji korisnik unosi neki niz slova engleske abecede te pomoču cezarove šifre ga promijeni za neki određeni uneseni ključ i isše rezultat.

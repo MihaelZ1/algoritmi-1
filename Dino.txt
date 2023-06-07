@@ -1,0 +1,5 @@
+1. Generiraj 2D polje [8][8] u kojem su sve brojke u svakome stupcu drugačije(brojke do 100)
+2. Generiraj 2D polje [8][8] čije se brojke spuste(do 10) tj. pomaknu za n razinu redaka u stupcu
+3. Napravi tekst do 30 slova Cezarovim kodom no svako peto slovo je nepravilno, tj. svako peto slovo je random generirano
+4. Ispiši trokut opisan kvadratu n duljine stranice, kvadrat ne popunjavamo već samo trokut a obrub označujemo sa „@ “, trokut popunjavamo nekom random generiranom brojkom do 9
+5. Ispiši kvadrat n duljine u kojem je glavna dijagonala označena sa „[“, a sporedna sa „]“, a obrub sa „O“,  dok je svaka od 4 cijelina imeđu dijagonala popunjena brojkama od 1 do 4 poredak nije bitan.

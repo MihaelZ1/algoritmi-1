@@ -1,0 +1,14 @@
+Zadaci:
+1. Unosimo pet slova engleske abecede(mala slova) pomoću jedne varijable. Ako je slovo neparan broj prema ASCII tablici pretvaramo ga u veliko slovo. Ako je paran broj prema ASCII tablici zbrajamo ga s ostalim unesenim parnim brojevima.
+2. Unosimo broj m koji nam služi kao najmanja vrijednost generiranja nasumičnih brojeva dok n služi kao najveća vrijednost. Generirane vrijednosti spremamo u listu(polje) te ispisujemo polje u željenom obliku. polje[50]
+3. Učenici nekog razreda srednje škole ispitani su tko prolazi taj razred s uspjehom/ocjenom ODLIČAN. Ako učenik prolazi razred s uspjehom odličan njegov odgovor će biti "T", ako ne prolazi odgovor ć biti "F". Učenik koji prolazi s uspjehom odličan pribraja se varijabli "brojač", a onaj koji ne prolazi dobiva daodatno pitanje s kojim uspjehom prolazi taj razred. Korisnik upisuje ocjenu te se ocjena pribraja varijabli "zbr_ocj" te se dobiva prosjek ocjena. Program ispiše broj odlikaša i prosjek ocjena ne odlikaša. Broj učenika 25. Korisnik unosi odgovore učenika "T"/"F"
+4. Tako dugo unosimo brojeve dok njihov zbroj nije veći od 500. Nakon toga određujemo je li zbroj paran ili neparan.
+5. Ispiši tablicu nasumično generiranih brojeva(interval [0, 9]). Polje[10][10]
+npr.
+0 1 2 3 4 5 ...
+1 2 5 2 5 7 ...
+2 4 6 7 1 8 ...
+3 5 6 8 2 9 ...
+.
+.
+.

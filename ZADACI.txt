@@ -1,0 +1,11 @@
+# ARSEN MUNĐAR 1.RM
+#1
+Napisi program koji generira random brojeve između 2 brojeva koje korisnkik unosi.
+#2
+Koristeci program iz 1. zadatka, prebroji koliko puta se pojedini broj generirao (polje je velicine max 10 brojeva).
+#3
+Napisi program koji sva mala slova pretvara u velika i povecava za +n (n unosi korisnik). Abeceda je povezana ciklicki.
+#4
+Napisi program gdje korisnik unosi slovo, a program to pretvara u ASCII vrijednost (int) te ispisuje tu vrijednost u binarnom kodu. Koristi printf za unos.
+#5
+Napisi program gdje korisnik unosi neki broj, ako korisnik unese 2 parna brojeva za redom ispisi "GOTOVO". Koristi switch case.

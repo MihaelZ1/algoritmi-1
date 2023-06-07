@@ -1,0 +1,9 @@
+1. Unosimo mala slova engleske abecede (max 30) i ispisemo koliko se puta svako slovo pojavljuje.
+
+2. Ispišemo nasumićno 2D polje (20x20) i korisnik treba odabrati stupac i redak koji se ispisuje tako da su redci od 1-20, a stupci od a-u.
+
+3. Unosimo mala slova engleske abecede (max 30) i unosimo koje slovo se mijenja u koje tako da slovo koje je bliže a u abecedi ide prvo a onda slovo dalje od a (f->j, ne j->f) pa zatim šifriramo unesena slova cezarovim šifriranjem tako da je kljuć razlika između unesenih slova.
+
+4. Ispiši 2D polje (10x10) popunjen s nulama i jednim x-om. Ako unesemo i x se pomakne jedno polje istočno, z zapadno, s sjeverno i j južno. Ako smo na kraju polja i idemo u tu stranu, x se stvara na drugoj strani polja.
+
+5. Unosimo mala slova engleske abecede (max 10) i jedan broj n, ascii vrijednost slova pomnožimo s n i tu vrijednost napravimo da je od 1 do 26 te ispišemo nove znakove.

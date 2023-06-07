@@ -1,0 +1,10 @@
+1.	Napiši program koji izračuna i ispiše tablicu množenja. Polje ima ukupno 100 elementi. Prvi element polja na ideksu[0][0] ima vrijednost kvadrata broja 2.
+
+2.	Napiši program koji za nasumično generirano polje sve elemente na glavnoj dijagonali zamijeni sa brojem 9, a sve elemente na sporednoj dijagonali zamijeni brojem 1. 	                 
+Polje mora biti [5][5]. (generirani brojevi nesmiju biti veći od 8).
+
+3.	Napiši program koji polje[8][8] puni korisnik, ali ako je neki broj već unesen neka na ekran ispiše „broj je vec u polju“. Također ako je uneseni broj veći od 9 neka na ekran ispiše „ Greska preveliki broj“. 
+
+4.	Napiši program koji ispiše najveći i najmanji element u nasumično generiranom polju, zamijeni najveći i najmanji broj, ispiše najveći i najmanji stupac te zamijeni najveći i najmanji stupac. Polje mora biti[5][5].
+
+5.	Napiši program koji za nasumično generirano polje [20][20] ispiše najveći zbroj redaka, te ih na kraju zamijeni.
