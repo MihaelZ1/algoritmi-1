@@ -196,4 +196,42 @@ aadns ej aekpt i...
 
 
 
- 
+ #include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+#include <cstdio>
+#include <ctime>
+
+
+using namespace std;
+
+int main() {
+    int slovo1=0;
+    int slovo2=0;
+    int mini=0;
+    int pom=0;
+    char a[100];
+    gets(a);
+    for(int i=0; a[i]!='\0'; i++){
+        mini=i;
+        for(int j=i+1; a[j]!='\0'; j++) {
+            slovo1=int(a[j]);
+            slovo2=int(a[mini]);
+            if(slovo1>(int)'Z') {
+                slovo1-=32;
+            }
+            if(slovo2>(int)'Z') {
+                slovo2-=32;
+            }
+            if(slovo2>slovo1){
+                mini=j;
+            }
+        }
+        swap(a[i], a[mini]);
+    }
+    for(int i=0; a[i]!='\0'; i++){
+        cout<<a[i];
+    }
+    return 0;
+}
