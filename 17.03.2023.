@@ -1,0 +1,49 @@
+CEZAROVA DEKRIPTA AKO IMAMO SIGURNO JEDNU RIJEC
+
+
+
+#include <iostream>
+#include <cstdio>
+#include <stdio.h>
+
+using namespace std;
+
+bool dekoder(char polje[20],char rijec){
+bool nalazi=true;
+int kljuc=0;
+for(int k=0;k<26;k++){
+kljuc=k;
+        polje[k]-=kljuc;
+
+for(int i=0; polje[i]!='\0';i++){
+nalazi=true;
+  for(int j=0; j<'\0';j++){
+   // if(polje[i+j]rijec[j])
+        nalazi=false;
+  }
+ if(nalazi=true){
+    break;
+
+ }
+ else{
+    break;
+ }
+
+}
+}
+ return kljuc;
+
+
+}
+int main()
+{
+char polje[20];
+gets(polje);
+char rijec;
+cin>>rijec;
+cout<<dekoder(polje,rijec);
+
+}
+
+
+
