@@ -1,0 +1,85 @@
+Pretvori iz dekadskog u binarni funkcija 
+
+
+#include <iostream>
+
+using namespace std;
+
+void pretvori(int broj){
+int polje[100];
+int brojZnamenaka=0;
+for(broj;broj>0;broj/=2){
+    //cout<<broj%2<<endl;
+    polje[brojZnamenaka]=broj%2;
+    brojZnamenaka++;
+}
+for(brojZnamenaka; brojZnamenaka>=0;brojZnamenaka--){
+    cout<<polje[brojZnamenaka];
+}
+}
+int main()
+{
+pretvori(100);
+return 0;
+}
+
+
+ispiše broj znamenaka nekog broja
+
+#include <iostream>
+
+using namespace std;
+
+int brojZnamenaka(int broj){
+int bz=0;
+for(bz;broj>0;bz++){
+    broj/=10;
+}
+return bz;
+}
+
+int main()
+{
+int broj;
+cin>>broj;
+cout<<brojZnamenaka(broj);
+
+return 0;
+}
+
+
+
+
+
+napiše je li broj "točan# brojh je tčan ... dalje na messengeru
+
+#include <iostream>
+
+using namespace std;
+
+bool brojZnamenaka(int broj){
+int bz=0;
+for(bz;broj>0;bz++){
+    broj/=10;
+}
+return bz;
+}
+bool tocan(int br){
+for(int i=0;i<brojZnamenaka;i++){
+polje[i]=br/10;
+if(polje[i]>polje[i+1]||polje[i]==polje[i+i]){
+return true;
+}
+else{
+return da;
+}
+}
+}
+
+int main()
+{
+int broj;
+cin>>broj;
+cout<<tocan(broj);
+return 0;
+}
