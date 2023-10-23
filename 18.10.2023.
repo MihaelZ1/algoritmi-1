@@ -1,3 +1,78 @@
+V polje napises nejse random brojke aj od 0 do 100 i onda ides po tom polju provjeravas ci je
+parni il neparni i onda denes v parno polje parne v neparno neparne i sorteras oba dve liste
+
+
+#include <iostream>
+#include <cstdio>
+#include <stdlib.h>
+#include <ctime>
+
+using namespace std;
+void rino(int polje[20]){
+int parni[20]={0};
+int neparni [20]={0};
+   int parnibr = 0;
+    int neparnibr = 0;
+
+    for (int i = 0; i < 20; i++) {
+        if (polje[i] % 2 == 0) {
+            parni[parnibr++] = polje[i];
+        } else {
+            neparni[neparnibr++] = polje[i];
+        }
+    }
+for(int i=0;i<20-1;i++){
+for(int j=0;j<20-1-i;j++){
+        if(parni[i]==0){
+            continue;
+        }
+if(parni[j]>parni[j+1]){
+    swap(parni[j],parni[j+1]);
+}
+}
+}
+for(int i=0;i<20-1;i++){
+for(int j=0;j<20-1-i;j++){
+        if(neparni[i]==0){
+            continue;
+        }
+if(neparni[j]>neparni[j+1]){
+    swap(neparni[j],neparni[j+1]);
+}
+}
+}
+for(int i=0;i<20;i++){
+    if(parni[i]==0){
+        continue;
+    }
+    cout<<parni[i]<<' ';
+}
+cout<<endl<<endl;
+for(int i=0;i<20;i++){
+    if(neparni[i]==0){
+        continue;
+    }
+    cout<<neparni[i]<<' ';
+}
+}
+
+int main()
+{
+srand(time(NULL));
+int polje[20];
+for(int i=0;i<20;i++){
+    polje[i]=rand()%10;
+    cout<<polje[i]<<' ';
+}
+cout<<endl<<endl;
+rino(polje);
+return 0;
+}
+
+
+
+
+
 Pretvori iz dekadskog u binarni funkcija 
 
 
