@@ -1,3 +1,46 @@
+Napiše obrnuti broj od unesenog
+
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <stdlib.h>
+
+using namespace std;
+
+int revers(int broj){
+int bz=0;
+int temp=broj;
+while(temp>0){
+    bz++;
+    temp/=10;
+
+}
+int polje[bz];
+temp =broj;
+for(int i=bz-1;i>=0;i--){
+polje[i]=temp%10;
+temp/=10;
+}
+int obrnuti=0;
+for(int i=0;i<bz;i++){
+obrnuti=obrnuti*10+broj%10;
+broj/=10;
+}
+return obrnuti;
+
+}
+int main()
+{
+int broj;
+cin>>broj;
+int obrnuti=revers(broj);
+cout<<obrnuti;
+}
+
+
+
+
+
 Napišite funkciju koja prima niz znakova (string) i vraća broj samoglasnika u tom stringu.
 
 #include <iostream>
