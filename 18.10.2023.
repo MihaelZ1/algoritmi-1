@@ -1,3 +1,40 @@
+Napišite funkciju koja prima niz znakova (string) i vraća broj samoglasnika u tom stringu.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int samoglasnici(char polje[20]) {
+    int brojac = 0;
+    char samoglasniki[5] = {'a', 'e', 'i', 'o', 'u'};
+
+    for (int i = 0; i < 20; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (polje[i] == samoglasniki[j]) {
+                brojac++;
+                break; // Exit the inner loop when a vowel is found
+            }
+        }
+    }
+    return brojac;
+}
+
+int main() {
+    char polje[20];
+   gets(polje); // Read a string of characters (up to 20 characters)
+    cout << "Broj samoglasnika: " << samoglasnici(polje);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
 V polje napises nejse random brojke aj od 0 do 100 i onda ides po tom polju provjeravas ci je
 parni il neparni i onda denes v parno polje parne v neparno neparne i sorteras oba dve liste
 
