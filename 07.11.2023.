@@ -57,3 +57,31 @@ char polje[100];
 gets(polje);
 cout<<zbroj(&polje[0]);
 }
+
+
+
+
+pretvara sve elemente polja iz malih slova u velika 
+
+
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+void zbroj(char *pint){
+for(int i=0;*(pint+i)!='\0';i++){
+if(*(pint+i)<='z' && *(pint+i)>='a'){
+*(pint+i)-=32;
+}
+}
+}
+int main()
+{
+char polje[100];
+gets(polje);
+zbroj(&polje[0]);
+char *ppolje =&polje[0];
+for(int i=0;*(ppolje+i)!='\0';i++)
+cout<<*(ppolje+i);
+}
+
