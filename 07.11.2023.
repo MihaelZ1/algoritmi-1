@@ -34,3 +34,26 @@ int main()
 int polje[100]={1,2,3,4,0};
 cout<<zbroj(&polje[0]);
 }
+
+
+
+izračuna koliko je elemenata u polju funkvija je char 
+
+
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+int zbroj(char *pint){
+int z=0;
+for(char i=0;*(pint+i)!='\0';i++){
+z++;
+}
+return z;
+}
+int main()
+{
+char polje[100];
+gets(polje);
+cout<<zbroj(&polje[0]);
+}
