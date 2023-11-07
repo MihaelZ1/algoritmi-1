@@ -85,3 +85,79 @@ for(int i=0;*(ppolje+i)!='\0';i++)
 cout<<*(ppolje+i);
 }
 
+
+
+zadatak gore + ispiše u fukciji posebnoj!!!
+
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+void zbroj(char *pint){
+for(int i=0;*(pint+i)!='\0';i++){
+if(*(pint+i)<='z' && *(pint+i)>='a'){
+*(pint+i)-=32;
+}
+}
+}
+
+void posebna(char *pchar){
+for(int i=0;*(pchar+i)!='\0';i++)
+cout<<*(pchar+i);
+}
+int main()
+{
+char polje[100];
+gets(polje);
+zbroj(&polje[0]);
+posebna(&polje[0]);
+}
+
+funkcija koja IZBACI sve razmake
+
+
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+void zbroj(char *pint){
+for(int i=0;*(pint+i)!='\0';i++){
+if(*(pint+i)<='z' && *(pint+i)>='a'){
+*(pint+i)-=32;
+}
+}
+}
+
+void posebna(char *pchar){
+for(int i=0;*(pchar+i)!='\0';i++)
+cout<<*(pchar+i);
+
+cout<<endl;
+}
+
+void promijeni(char *pcin){
+for(int i=0;*(pcin+i)!='\0';i++){
+if(*pcin==' '){
+break;
+}
+else
+cout<<*(pcin+i);
+
+}
+}
+
+
+int main()
+{
+char polje[100];
+gets(polje);
+zbroj(&polje[0]);
+posebna(&polje[0]);
+promijeni(&polje[0]);
+
+}
+
+
+
+
+
