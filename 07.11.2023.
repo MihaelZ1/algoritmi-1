@@ -1,0 +1,36 @@
+ispiše vrijednosti polja uz pomoć pointera
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int polje[5]={1,2,3,4,5};
+int *ppolje;
+ppolje=polje;
+for(int i=0;i<5;i++){
+  cout<<*(i+ppolje)<<endl;
+}
+}
+
+
+zbroji elemente polja ali tako dugo dok vrijednost u polju na koju pokazuje pointer nije jednaka nuli
+
+#include <iostream>
+
+using namespace std;
+int zbroj(int *pint){
+int z=0;
+for(int i=0;*(pint+i)!=0;i++){
+z+=*(pint+i);
+}
+return z;
+}
+int main()
+{
+int polje[100]={1,2,3,4,0};
+cout<<zbroj(&polje[0]);
+}
