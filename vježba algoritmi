@@ -1,0 +1,24 @@
+Provjerava kolko broj ima parnih znamenki
+
+#include <iostream>
+
+using namespace std;
+int parne_znamenke(int broj){
+int br=0;
+while(broj>0){
+int znamenka=broj%10;
+if(znamenka%2==0){
+    br++;
+}
+broj/=10;
+}
+return br;
+}
+int main()
+{
+int broj;
+cin>>broj;
+cout<<parne_znamenke(broj);
+}
+
+
