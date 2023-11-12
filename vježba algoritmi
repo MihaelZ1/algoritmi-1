@@ -21,4 +21,47 @@ cin>>broj;
 cout<<parne_znamenke(broj);
 }
 
+površina prstena
 
+#include <iostream>
+
+using namespace std;
+void povrsina_prstena(int r2,int r){
+float povrsina=0;
+povrsina=3.14*((r2*r2)-(r*r));
+cout<<povrsina;
+}
+int main()
+{
+int r2,r;
+cin>>r2>>r;
+povrsina_prstena(r2,r);
+}
+
+udaljenost slova jedno od drugoga 
+
+
+#include <iostream>
+
+using namespace std;
+
+void udaljenost(char prvo, char drugo) {
+int duljina_abecede=26;
+prvo=(prvo-'a'+duljina_abecede)%duljina_abecede+'a';
+drugo=(drugo-'a'+duljina_abecede)%duljina_abecede+'a';
+int razlika=0;
+if(prvo>drugo) {
+razlika=prvo-drugo;
+}
+else if(drugo>prvo) {
+razlika=drugo-prvo;
+}
+cout<<razlika<<endl;
+}
+
+int main() {
+char prvo,drugo;
+cin>>prvo>>drugo;
+udaljenost(prvo,drugo);
+return 0;
+}
