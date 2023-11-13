@@ -85,22 +85,18 @@ udaljenost slova jedno od drugoga
 using namespace std;
 
 void udaljenost(char prvo, char drugo) {
-int duljina_abecede=26;
-prvo=(prvo-'a'+duljina_abecede)%duljina_abecede+'a';
-drugo=(drugo-'a'+duljina_abecede)%duljina_abecede+'a';
-int razlika=0;
-if(prvo>drugo) {
-razlika=prvo-drugo;
+int razlika = abs(prvo - drugo);
+if(razlika>13){
+  razlika=26-razlika;
 }
-else if(drugo>prvo) {
-razlika=drugo-prvo;
-}
-cout<<razlika<<endl;
+    cout << razlika << endl;
 }
 
 int main() {
-char prvo,drugo;
-cin>>prvo>>drugo;
-udaljenost(prvo,drugo);
+char prvo;
+char drugo;
+cin >> prvo;
+cin >> drugo;
+udaljenost(prvo, drugo);
 return 0;
 }
