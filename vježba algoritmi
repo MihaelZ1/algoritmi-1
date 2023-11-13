@@ -1,3 +1,42 @@
+Unosi se broj sve dok nije unesen prosti broj
+
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <stdlib.h>
+
+using namespace std;
+
+bool prostibroj(int broj){
+if(broj==1 || broj==0){
+  return false;
+}
+for(int i=2;i<=broj/2;i++){
+if(broj%i==0){
+return false;
+}
+}
+return true;
+}
+void unos(int &broj){
+do{
+cout<<"Unesite broj: ";
+cin>>broj;
+
+if(prostibroj(broj)==true){
+    break;
+}
+}
+while(prostibroj(broj)==false);
+}
+int main()
+{
+int broj;
+unos(broj);
+cout << "Unijeli ste prost broj: " << broj << endl;
+}
+
+
 Provjerava kolko broj ima parnih znamenki
 
 #include <iostream>
@@ -13,7 +52,7 @@ if(znamenka%2==0){
 broj/=10;
 }
 return br;
-}
+}    
 int main()
 {
 int broj;
