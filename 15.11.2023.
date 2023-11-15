@@ -1,0 +1,38 @@
+"izbaci" razmake iz polja
+
+#include <iostream>
+
+using namespace std;
+
+void ibr(char *c){
+char *pomocna;
+while(*c!='\0'){
+if(*c==' '){
+pomocna=c;
+while(*pomocna!='\0'){
+*pomocna=*(pomocna+1);
+pomocna++;
+}
+}
+else
+    c++;
+}
+}
+void  ispis(char *polje){
+for(int i=0;*(polje+i)!='\0';i++){
+cout<<*(polje+i);
+}
+}
+
+int main()
+{
+char polje[100];
+gets(polje);
+ibr(polje);
+ispis(polje);
+}
+
+napiši funkciju koja svaki razmak zamijeni s znakovima $$
+
+
+
