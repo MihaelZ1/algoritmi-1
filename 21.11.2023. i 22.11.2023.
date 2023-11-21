@@ -1,0 +1,44 @@
+napiši funkciju koja u polu umjesto razmaka napiše "$$"
+
+#include <iostream>
+
+using namespace std;
+
+void  ispis(char *polje){
+for(int i=0;*(polje+i)!='\0';i++){
+cout<<*(polje+i);
+}
+}
+void zamijeni(char *c){
+char *pomocna;//pomocna varijabla
+while(*c!='\0'){//određuje "kraj" niza
+if(*c==' '){//ako c pokaže na razmak
+pomocna=c;
+while(*pomocna!='\0')//određuje kraj niza 
+pomocna++;//povečava pomočno varijablu jer imamo jedan vipše znak od razmaka koji treba ispisati
+while(pomocna!=c){//tako dugo dok pomočna nije jednaka c
+*(pomocna+1)=*pomocna;//vrijednost na pomočna +1 jednaka je pomočna 
+pomocna--;//smanjimo pomočnu jer smo došli do '\0'
+}
+*c='$'; //postavimo da je vrijednost na c jednaka $
+*(c+1)='$'; //postavimo da je vrijednost na c+1 jednaka $ jer imamo jedan više znak od razmaka
+
+}
+c++;//poveča c 
+}
+}
+
+int main()
+{
+char polje[1000];
+gets(polje);
+zamijeni(polje);
+ispis(polje);
+}
+
+napiši funkciju koja polje sortira abecdnim redom
+npr danas je dan
+aaade.....
+
+
+
