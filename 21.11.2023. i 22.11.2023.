@@ -75,4 +75,7 @@ sortiraj(polje);
 ispis(polje);
 }
 
+gornji zadatak riješiti selection sortom
+
+
 
