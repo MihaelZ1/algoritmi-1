@@ -40,5 +40,39 @@ napiši funkciju koja polje sortira abecdnim redom
 npr danas je dan
 aaade.....
 
+#include <iostream>
+
+using namespace std;
+
+void  ispis(char *polje){
+for(int i=0;*(polje+i)!='\0';i++){
+cout<<*(polje+i);
+}
+}
+
+void sortiraj(char *c){
+bool biloJeZamjene=true;
+char*t;
+while(biloJeZamjene){
+t=c;
+biloJeZamjene=false;
+while(*(t+1)!='\0'){
+if(*t>*(t+1)){
+char p=*t;
+*t=*(t+1);
+*(t+1)=p;
+biloJeZamjene=true;
+}
+t++;
+}
+}
+}
+int main()
+{
+char polje[1000];
+gets(polje);
+sortiraj(polje);
+ispis(polje);
+}
 
 
