@@ -78,4 +78,34 @@ ispis(polje);
 gornji zadatak riješiti selection sortom
 
 
+#include <iostream>
+
+using namespace std;
+
+void  ispis(char *polje){
+for(int i=0;*(polje+i)!='\0';i++){
+cout<<*(polje+i);
+}
+}
+
+void sortiraj(char *c){
+for(int i=0;*c!='\0'){
+   char*najmanji=c;
+    for(int j=0;*najmanji!='\0'){
+        if(*c>*najmanji){
+
+        }
+    }
+
+
+
+
+}
+int main()
+{
+char polje[1000];
+gets(polje);
+sortiraj(polje);
+ispis(polje);
+}
 
