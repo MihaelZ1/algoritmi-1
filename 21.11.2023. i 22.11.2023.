@@ -109,3 +109,50 @@ sortiraj(polje);
 ispis(polje);
 }
 
+PROBAJ DOMA REŠITI
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+void kopiraj(int *prvi,int*drugi){
+int i=0;
+    for(i=0;*(prvi+i)!=-1;i++){
+    *(drugi+i)=*(prvi+i);
+    *(drugi+i)=-1;
+    }
+}
+
+int vratiIndeks(int *pokazivac){
+int pomocno[1000];
+int indeks=0;
+    for(int i=0;*(pokazivac+i)!=-1;i++){
+        kopiraj(pokazivac, pomocno);
+            if(*(pokazivac+i)==-1){
+            break;
+}
+                else{    //if(*(pokazivac+i)==pomocno[i])
+
+                indeks=pomocno[i];
+                pomocno[i]=-1;
+                    pokazivac+=*(pokazivac);
+
+            }
+
+        }
+return indeks;
+}
+
+int main()
+{
+srand(time(0));
+int polje[20];
+polje[19]=-1;
+for(int i=0;i<19;i++){
+    polje[i]=rand()%19;
+}
+    for(int i=0;i<20;i++){
+        cout<<polje[i]<<' ';
+}
+cout<<endl;
+cout<<"Indeks najpovoljnijeg slucaja je: "<<vratiIndeks<<endl;
+}
