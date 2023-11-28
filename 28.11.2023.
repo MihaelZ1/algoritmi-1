@@ -1,0 +1,181 @@
+napiši funkciju koja vrati najveci broj ponavljanja slova u polju
+
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <cstdio>
+
+using namespace std;
+int vrati(char *nekaj){
+int br=0;
+int najveci=0;
+for(int i=0;*(nekaj+i)!='\0';i++){
+if(*(nekaj+i)==*(nekaj+i+1)){
+br++;
+}
+    else if(br>najveci){
+        najveci=br;
+        br=1;
+    }
+  }
+
+  return najveci;
+
+}
+
+
+int main()
+{
+char polje[20];
+gets(polje);
+cout<<vrati(polje)<<endl;
+}
+
+napiši funkciju koja vrati slovo koje se najviše puta ponavlja
+
+
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <cstdio>
+
+using namespace std;
+void slovo(char polje){
+cout<<polje<<endl;
+}
+int vrati(char *nekaj){
+int br=0;
+char pomocni;
+int najveci=0;
+for(int i=0;*(nekaj+i)!='\0';i++){
+if(*(nekaj+i)==*(nekaj+i+1)){
+br++;
+pomocni=*(nekaj);
+}
+    else if(br>najveci){
+        najveci=br;
+        br=1;
+    }
+  }
+slovo(pomocni);
+  return najveci;
+
+}
+
+
+int main()
+{
+char polje[20];
+gets(polje);
+cout<<vrati(polje)<<endl;
+}
+
+napisi funkciju koja ISPIŠE niz tipkica koje treba pritisnuti da bi se napisala neka poruka.
+primjer: neka poruka. ispis--->6633552076664.......
+
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <cstdio>
+
+using namespace std;
+void ispis_poruke(char *pointer){
+    int prosli=-1;
+    for(int i=0;*(pointer+i)!='\0';i++){
+if(*(pointer+i)=='a'){
+    cout<<"2";
+}
+if(*(pointer+i)=='b'){
+    cout<<"22";
+}
+if(*(pointer+i)=='c'){
+    cout<<"222";
+}
+if(*(pointer+i)=='d'){
+    cout<<"3";
+}
+if(*(pointer+i)=='e'){
+    cout<<"33";
+}
+if(*(pointer+i)=='f'){
+    cout<<"333";
+}
+if(*(pointer+i)=='g'){
+    cout<<"4";
+}
+if(*(pointer+i)=='h'){
+    cout<<"44";
+}
+if(*(pointer+i)=='i'){
+    cout<<"444";
+}
+if(*(pointer+i)=='j'){
+    cout<<"5";
+}
+if(*(pointer+i)=='k'){
+    cout<<"55";
+}
+if(*(pointer+i)=='l'){
+    cout<<"555";
+}
+if(*(pointer+i)=='m'){
+    cout<<"6";
+}
+if(*(pointer+i)=='n'){
+    cout<<"66";
+}
+if(*(pointer+i)=='o'){
+    cout<<"666";
+}
+if(*(pointer+i)=='p'){
+    cout<<"7";
+}
+if(*(pointer+i)=='q'){
+    cout<<"77";
+}
+if(*(pointer+i)=='r'){
+    cout<<"777";
+}
+if(*(pointer+i)=='s'){
+    cout<<"7777";
+}
+if(*(pointer+i)=='t'){
+    cout<<"8";
+}
+if(*(pointer+i)=='u'){
+    cout<<"88";
+}
+if(*(pointer+i)=='v'){
+    cout<<"888";
+}
+if(*(pointer+i)=='w'){
+    cout<<"9";
+}
+if(*(pointer+i)=='x'){
+    cout<<"99";
+}
+if(*(pointer+i)=='y'){
+    cout<<"999";
+}
+if(*(pointer)=='z'){
+    cout<<"9999";
+}
+if(*(pointer+i)==' '){
+    cout<<"0";
+}
+if(prosli%10==*(pointer)%10){
+    cout<<"_";
+}
+}
+}
+
+int main()
+{
+char polje[20];
+gets(polje);
+ispis_poruke(polje);
+}
+
+ zadatak od gor ali obrnuto
+
+ "DZ"
