@@ -1,1 +1,45 @@
+#include <iostream>
+
+using namespace std;
+void ispis(int *c){
+cout<<*c;
+}
+void red_ucenika_ispis(int *prvo, int *drugo){
+int prvi_red[10];
+int drugi_red[10];
+bool lopta=false;
+prvi_red[0]=1;
+prvi_red[1]=2;
+prvi_red[2]=3;
+prvi_red[3]=4;
+drugi_red[0]=5;
+drugi_red[1]=6;
+drugi_red[2]=7;
+for(int i=0;*(prvo+i)!=0;i++){
+    for(int j=0;*(drugo+j)!=0;j++){
+        if(i==0){
+            lopta=true;
+            *prvo=prvi_red[i];
+                   *drugo=*prvo;
+        }
+
+            else{
+                lopta=false;
+                *drugo=drugi_red[j];
+            }
+            if(lopta==true)
+ ispis(prvo);
+ else
+ ispis(drugo);
+ lopta=!lopta;
+}
+}
+}
+
+int main()
+{
+int polje[20];
+int drugo[20];
+red_ucenika_ispis(polje,drugo);
+}
 
