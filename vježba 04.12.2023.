@@ -1,0 +1,223 @@
+zadatak: makne iz polja zanju riječ
+
+#include <iostream>
+
+using namespace std;
+void ispis(char *c){
+for(int i=0;*(c+i)!='\0';i++){
+cout<<*(c+i);
+}
+}
+void zadnja(char *polje){
+    int dimenzije=0;
+while(polje[dimenzije]!='\0'){
+    dimenzije++;
+}
+    int indeks=-1;
+for(int i=dimenzije-1;i>=0;i--){
+    if(polje[i]==' '){
+        indeks=i;
+        break;
+    }
+}
+if(indeks!=-1){
+    polje[indeks]='\0';
+}
+}
+
+int main()
+{
+char polje[1000];
+gets(polje);
+zadnja(polje);
+ispis(polje);
+}
+
+zadatak: ispiše zadnju riječ polja dvaput
+
+#include <iostream>
+
+using namespace std;
+void ispis(char *c){
+for(int i=0;*(c+i)!='\0';i++){
+cout<<*(c+i);
+}
+}
+void zadnja(char *polje){
+    int dimenzije=0;
+while(polje[dimenzije]!='\0'){
+    dimenzije++;
+}
+    int indeks=-1;
+for(int i=dimenzije-1;i>=0;i--){
+    if(polje[i]==' '){
+        indeks=i;
+        break;
+    }
+}
+if(indeks!=-1){
+    ispis(polje);
+    cout<<polje+indeks;
+}
+else
+    ispis(polje);
+}
+
+int main()
+{
+char polje[1000];
+gets(polje);
+zadnja(polje);
+
+}
+
+zadatak: makne razmake iz polja
+
+#include <iostream>
+
+using namespace std;
+void ispis(char *c) {
+    for (int i = 0; *(c + i) != '\0'; i++) {
+        cout << *(c + i);
+    }
+}
+
+void izbaci_razmak(char *polje) {
+    int j = 0;
+    for (int i = 0; polje[i] != '\0'; i++) {
+        if (polje[i] != ' ') {
+            polje[j++] = polje[i];
+        }
+    }
+    polje[j] = '\0';
+}
+
+
+int main()
+{
+char polje[1000];
+gets(polje);
+izbaci_razmak(polje);
+ispis(polje);
+}
+
+bubble sort polja char 
+
+#include <iostream>
+
+using namespace std;
+
+void ispis(char *c){
+for(int i=0;*(c+i)!='\0';i++){
+    cout<<*(c+i);
+}
+}
+void sortiraj(char *c){
+    int duljina=0;
+for(int i=0;*(c+i)!='\0';i++){
+    duljina++;
+}
+for(int i=0;i<duljina-1;i++){
+for(int j=0;j<duljina-1-i;j++){
+    if(c[j+1]<c[j]){
+        swap(c[j],c[j+1]);
+    }
+}
+
+}
+}
+
+int main()
+{
+char polje[1000];
+gets(polje);
+sortiraj(polje);
+ispis(polje);
+}
+ zatatak: zbrajanje dvaju brojeva i ispisiavnje njihovih adresi 
+
+ #include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <cstdlib>
+using namespace std;
+void zbrajanje(int a,int b,int*c){
+cout<<a<<endl<<&a<<endl<<b<<endl<<&b<<endl;
+*c=a+b;
+}
+int main(){
+int a,b;
+cout << "Unesite dva broja: ";
+cin >> a >> b;
+int c=0;
+zbrajanje(a,b,&c);
+cout<<c<<endl<<&c<<endl;
+return 0;
+}
+
+zadatak: zamijeni razmake s "$$" 
+
+#include <iostream>
+
+using namespace std;
+
+void ispis(char *c){
+for(int i=0;c[i];i++){
+    cout<<c[i];
+}
+}
+void zamijeni_razmak(char *c){
+ int duljina = 0;
+    for (; c[duljina] != '\0'; duljina++);
+
+    for (int i = 0; c[i] != '\0'; i++) {
+        if (c[i] == ' ') {
+            for (int j = duljina; j > i; j--) {
+                c[j+1]=c[j];
+            }
+            c[i] = c[i + 1] = '$';
+            duljina++;
+        }
+    }
+}
+
+
+int main()
+{
+char polje[1000];
+gets(polje);
+zamijeni_razmak(polje);
+ispis(polje);
+}
+
+ispiše najčešće slovo koje je korisnik unio i broj ponavljanja tog slova
+
+#include <iostream>
+
+using namespace std;
+
+void nadji(char *c){
+int brojslova[26]={0};
+while(*c){
+    if(*c>='a'&&*c<='z'){
+        brojslova[*c-'a']++;
+    }
+    c++;
+}
+char najcesce='a';
+int najveci=brojslova[0];
+for(int i=1;i<26;i++){
+    if(brojslova[i]>najveci){
+        najcesce='a'+i;
+        najveci=brojslova[i];
+    }
+}
+cout<< "Najčešće slovo je '" << najcesce << "' s brojem pojavljivanja: " << brojslova[najcesce - 'a'] << endl;
+}
+
+int main()
+{
+char polje[1000];
+gets(polje);
+nadji(polje);
+}
