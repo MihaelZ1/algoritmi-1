@@ -221,3 +221,4 @@ char polje[1000];
 gets(polje);
 nadji(polje);
 }
+
