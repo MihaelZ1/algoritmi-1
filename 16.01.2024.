@@ -1,0 +1,20 @@
+//zadaća
+
+#include <iostream>
+using namespace std;
+
+int Najmanji(int *polje, int N) {
+int najmanji = *polje;
+for (int i = 1; i < N; i++) {
+if (*(polje + i) < najmanji) {
+najmanji = *(polje + i);
+}
+}
+return najmanji;
+}
+
+int main() {
+int polje[5] = {500, 200, 750, 1000, 300};
+cout<<Najmanji(polje,5);
+return 0;
+}
