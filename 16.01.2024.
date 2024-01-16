@@ -18,3 +18,114 @@ int polje[5] = {500, 200, 750, 1000, 300};
 cout<<Najmanji(polje,5);
 return 0;
 }
+
+
+//napiši funkciju rekurzivnu koja vrati broj velikih slovoa u nekom nizu
+
+#include <iostream>
+
+using namespace std;
+int BVS(char *c){
+    if(*c== '\0')
+    return 0;
+ if(*c>='A'&&*c<='Z')
+    return 1+BVS(c+1);
+ else
+    return 0+BVS(c+1);
+
+
+}
+
+int main()
+{
+char polje[10];
+cout<<"Unesite niz: ";
+gets(polje);
+BVS(&polje[0]);
+}
+
+//vrati razliku malih i velikih slova niza
+
+#include <iostream>
+
+using namespace std;
+int BVS(char *c){
+    if(*c== '\0')
+    return 0;
+ if(*c>='A'&&*c<='Z')
+    return 1+BVS(c+1);
+ else
+    return 0+BVS(c+1);
+}
+int BMS(char *c){
+if(*c=='\0')
+    return 0;
+if(*c>='a'&&*c<='z')
+    return 1+BMS(c+1);
+else
+    return 0+BMS(c+1);
+}
+
+int main()
+{
+string polje="daf  efGASFAS";
+cout<<BVS(&polje[0])-BMS(&polje[0]);
+}
+
+
+//napiši rekurzivnu funkciju koja vrati broj znakova u nekom nizu
+
+#include <iostream>
+
+using namespace std;
+int bz(char *c){
+   if(*c== '\0')
+    return 0;
+    else
+     return 1+bz(c+1);
+}
+
+int main()
+{
+string polje="dafef GASF AS";
+cout<<bz(&polje[0]);
+}
+
+//napiši rekurzivnu funkciju koja sva mala slova eng. abecede zamijeni velikim slovima
+
+#include <iostream>
+
+using namespace std;
+void BVS(char *c){
+    if(*c== '\0')
+    return ;
+ if(*c>='a'&&*c<='z')
+    *c='A'+*c-'a';
+    cout<<*c;
+
+  BVS(c+1);
+}
+int main()
+{
+string polje="karlo je";
+BVS(&polje[0]);
+}
+
+//napiši rekurzivnu funkciju koja vrati jeli neki broj prost broj
+
+#include <iostream>
+
+using namespace std;
+bool prosti(int *c){
+if(*c==1&&*c==0)
+    return 0+prosti(c+1);
+if(*c%*c==0&&*c%1==0)
+    return 1+prosti(c+1);
+}
+
+int main()
+{
+int broj;
+cin>>broj;
+cout<<prosti(&broj);
+}
