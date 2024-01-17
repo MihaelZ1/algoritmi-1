@@ -1,0 +1,76 @@
+//napiši funkciju koja vrati umnoža korijena prvih n prirodnih brojeva
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+float vratiZBROJ(float n){
+if(n==0)
+    return 1;
+else
+    return sqrt(n)*vratiZBROJ(n-1);
+}
+int main()
+{
+float n;
+cin>>n;
+cout<<vratiZBROJ(n);
+}
+
+//napiši rekurzivnu funkciju koja provijeri nalazi li se neki znak u nekom nizu
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+bool provijeri(char *c,char z){
+if(*c=='\0')
+    return 0;
+if(provijeri(c+1,z)==1)
+    return 1;
+else if(*c==z)
+    return 1;
+else
+    return 0;
+
+}
+
+int main()
+{
+string niz="DHABSFJaJBASFKAEGQAFBAjneck";
+char znak;
+cin>>znak;
+cout<<provijeri(&niz[0],znak);
+}
+
+//npiši funkciju koja vrati indeks prvog pojavljivanja nekog znaka. Funkcija vraća -1 ukoliko se znak NE nalazi u nizu
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+int provijeri(char *c,char z){
+    int brojac=0;
+if(*c=='\0'){
+        brojac++;
+        return -1;
+}
+if(provijeri(c+1,z)==1){
+    brojac++;
+    return brojac;
+}
+else if(*c==z){
+    brojac++;
+    return brojac;
+}
+else{
+    brojac++;
+
+    return -1;
+}
+}
+
+int main()
+{
+string niz="paradajz";
+char znak;
+cin>>znak;
+cout<<provijeri(&niz[0],znak);
+}
