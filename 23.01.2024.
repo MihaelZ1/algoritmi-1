@@ -1,0 +1,83 @@
+//onaj zadatak s skokovima
+
+#include <iostream>
+
+using namespace std;
+
+void kopiraj(int *iz,int *u){
+*u=*iz;
+if(*iz==-1)
+    return;
+        kopiraj(iz+1,u+1);
+}
+int obidji(int *polje,int n){
+if(*(polje+n)==-2)
+    return 0;
+
+int nn=*(polje+n);
+*(polje+n)=-2;
+
+return 1+obidji(polje,nn);
+}
+int main()
+{
+int polje[11]={1,2,5,7,3,8,6,9,0,4,-1};
+int drugo[11]={0};
+for(int i=0;i<10;i++){
+  kopiraj(polje,drugo);
+  cout<<obidji(polje,i);
+}
+}
+
+//napiši program koji ispiše indekse kojima se prođe najveći dio polja
+
+#include <iostream>
+
+using namespace std;
+
+void kopiraj(int *iz,int *u){
+*u=*iz;
+if(*iz==-1)
+    return;
+        kopiraj(iz+1,u+1);
+}
+
+int obidji(int *polje,int n){
+if(*(polje+n)==-2)
+    return 0;
+
+int nn=*(polje+n);
+*(polje+n)=-2;
+
+return 1+obidji(polje,nn);
+}
+void indeksi(int *polje,int n){
+if(*(polje+n)==-2)
+return ;
+int nn=*(polje+n);
+cout<<nn<<endl;
+indeksi(polje,nn);
+}
+int main()
+{
+int polje[11]={1,2,5,7,3,8,6,9,0,4,-1};
+int drugo[11]={0};
+int kojimIndeksom=0;
+int najveciProlaz=-1;
+for(int i=0;i<10;i++){
+        kopiraj(polje,drugo);
+  int pomoc=obidji(drugo,i);
+  if(pomoc>najveciProlaz){
+    najveciProlaz=pomoc;
+    kojimIndeksom=i;
+  }
+
+}
+cout<<kojimIndeksom<<endl;
+int polje2[11]={0};
+for(int j=0;polje[j]!=-2;j++){
+   polje2[j]=polje[j];
+}
+indeksi(&polje2[0],kojimIndeksom);
+}
+
