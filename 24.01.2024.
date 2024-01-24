@@ -1,0 +1,29 @@
+//napiši program koji vrati slovo kojese najviše ponavlja u nekom nizu
+
+#include <iostream>
+
+using namespace std;
+int pomocno(char *p,char slovo){
+if(*p=='\0')
+    return 0;
+    if(*p==slovo)
+        return 1+pomocno(p+1,slovo);
+    else
+        return pomocno(p+1,slovo);
+}
+int main()
+{
+string niz="abcdefgh";
+char slovo;
+int najveci=0;
+for(int i='a';i<='z';i++){
+  int k=pomocno(&niz[0],i);
+  if (k>najveci){
+    najveci=k;
+   slovo=i;
+}
+}
+cout<<slovo;
+}
+
+//
