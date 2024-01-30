@@ -1,0 +1,167 @@
+ne smijes koristiti petlje
+uvijek postoji rjesenje
+
+polje od n elemenata
+prvi i posljednji element su UVIJEK nula.
+ostale vrijednosti su veće i manje od nule.
+-------------------------------------------
+napisi program koji vrati na kojem indeksu je zbroj lijevo od odabranog indeksa jednak zbroju desno od odabranog indeksa
+
+moje rješenje 
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int PoPolju(int *p){
+return 1+PoPolju(p+1);
+}
+
+int ZprI(int *p){
+if(*p==0)
+   return 0;
+
+if(*p<PoPolju)
+    return 1+ZprI(p+1);
+
+else
+    return 0+ZprI(p+1);
+}
+
+int ZpoI(int *p){
+if(p==0)
+   return 0;
+
+if(*p>PoPolju)
+    return 1+ZprI(p+1);
+
+else
+   return 0+ZprI(p+1);
+}
+
+
+int main()
+{
+int polje [10]={0,1,2,5,7,3,9,2,4,0};
+PoPolju(&polje[0]);
+
+cout<<ZprI(&polje[0])<<endl;
+cout<<ZpoI(&polje[0])<<endl;
+}
+
+
+drugo rješenje tota
+#include <iostream>
+using namespace std;
+
+int zbrojLijevo(int *b){
+    if(*b==0){
+        return 0;
+    }
+    return *b + zbrojLijevo(b-1);
+}
+
+int zbrojDesno(int *b){
+    if(*b==0){
+        return 0;
+    }
+    return *b + zbrojDesno(b+1);
+}
+
+int vratiIndeks(int *b, int i){
+    if(i==0){
+        b=b+1;
+    }
+    if(zbrojLijevo(b-1) == zbrojDesno(b+1)){
+            return i+1;
+        }
+    else{
+        vratiIndeks(b+1, i+1);
+    }
+}
+
+int main()
+{
+    int polje[20]={9,0,-1,1,-8,8,2,4,-8,-7,-4,2,0,6,7,8};
+    cout<<vratiIndeks(polje, 0);
+    return 0;
+}
+
+ prof. rj.
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int ZprI(int *p){
+if(*p==0)
+   return 0;
+return *p+ZprI(p-1);
+}
+
+int ZpoI(int *p){
+if(p==0)
+   return 0;
+return *p+ZprI(p+1);
+}
+ int indeks(int *p){
+ if(*p==0)
+ return -1;
+ if(ZprI(p)==ZpoI(p))
+    return 0;
+ return 1+indeks(p+1);
+}
+
+int main()
+{
+int polje [10]={0,1,2,5,7,3,9,2,4,0};
+cout<<indeks(&polje[0])<<endl;
+
+cout<<ZprI(&polje[0])<<endl;
+cout<<ZpoI(&polje[0])<<endl;
+}
+
+napisi rekurzivnu funkciju koja vrati zbroj vrijednosti na indeksima na kojima je zbroj lijevo od indeksa jedank zbroju desno od indeksa.
+ako takve vrijdnosti ne postoje vratiti 0
+polje je ograniceno nulama
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int ZprI(int *p){
+if(*p==0)
+   return 0;
+return *p+ZprI(p-1);
+}
+
+int ZpoI(int *p){
+if(*p==0)
+   return 0;
+return *p+ZprI(p+1);
+}
+ int indeks(int *p){
+ if(*p==0)
+ return -1;
+ if(ZprI(p) == ZpoI(p))
+    return 0;
+    int rezultat=indeks(p+1);
+ if(rezultat<0)
+    return -1;
+ return 1+rezultat;
+}
+int zbroj_indeksi(int *p){
+if(ZprI(p)==ZpoI(p))
+    return 1+indeks(p);
+else
+    return 0;
+}
+
+int main()
+{
+int polje [11]={0,2,2,3,4,5,1,2,3,5,0};
+cout<<ZprI(polje)<<endl;
+cout<<ZpoI(polje)<<endl;
+cout<<indeks(polje)<<endl;
+cout<<zbroj_indeksi(polje);
+}
