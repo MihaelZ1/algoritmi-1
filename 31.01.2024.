@@ -1,0 +1,35 @@
+napisi rekurzivnu funkciju koja vrati koji stupac ima najveci zbroj (2x2 polje) ne smijes koristiti petlje
+
+#include <iostream>
+
+using namespace std;
+int PoPolju(int idi){
+idi++;
+}
+int ZbrojiRetke(int *p,int n,int m){
+    
+    if(m<0)
+        return 0;
+
+    if()
+        return *p+ZbrojiRetke(p+1,n+1,m-1);
+
+    else
+
+        return 0+ZbrojiRetke(p+1,n+1,m-1);
+
+}
+int main()
+{
+int n=5;
+int m=5;
+int polje[n][m];
+for(int i=0;i<n;i++){
+for(int j=0;j<m;j++){
+polje[i][j]=rand()%10;
+cout<<polje[i][j]<<' ';
+}
+cout<<endl;
+}
+cout<<ZbrojiRetke(&polje[0][0],n,m);
+}
