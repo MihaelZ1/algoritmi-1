@@ -1,0 +1,169 @@
+pretvori sva mala slova u velika
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+void pretvori(char *polje){
+if(*polje=='\0')
+    return ;
+if(*polje>='a'&&*polje<='z')
+*polje='A'+*polje-'a';
+cout<<*polje;
+pretvori(polje+1);
+}
+
+
+int main()
+{
+char polje[100];
+gets(polje);
+pretvori(&polje[0]);
+}
+
+pronađe neki znak u nekom nizu
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+bool trazi(char *polje,char znak){
+if(*polje=='\0')
+    return 0;
+if(trazi(polje+1,znak)==1)
+    return 1;
+    if(*polje==znak)
+        return 1;
+        return 0;
+}
+int main()
+{
+string polje="LMAO jedi krave";
+char znak;
+cin>>znak;
+cout<<trazi(&polje[0],znak);
+}
+
+vrati jeli neki broj prosti broj
+
+#include <iostream>
+using namespace std;
+bool prosti(int *c,int i=2){
+if(*c==1||*c==0)
+    return 0;
+if(i==*c)
+    return 1;
+if(*c%i==0)
+    return 0;
+return prosti(c,i+1);
+}
+
+int main()
+{
+int broj;
+cin>>broj;
+cout<<prosti(&broj);
+}
+
+funkcija koja vrati pojavljuje li se neki znak u polju, ako ne vrati -1
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+int provijeri(char *c,char z){
+    int brojac=0;
+if(*c=='\0'){
+        brojac++;
+        return -1;
+}
+if(provijeri(c+1,z)==1){
+    brojac++;
+    return brojac;
+}
+else if(*c==z){
+    brojac++;
+    return brojac;
+}
+else{
+    brojac++;
+
+    return -1;
+}
+}
+
+int main()
+{
+string niz="paradajz";
+char znak;
+cin>>znak;
+cout<<provijeri(&niz[0],znak);
+}
+
+zbroji prvih n prirodnih brojeva
+
+#include <iostream>
+using namespace std;
+int zbroji(int n,int i=1){
+if(n<=0)
+    return 0;
+else
+    return i+zbroji(n-1,i+1);
+}
+
+int main()
+{
+int n;
+cin>>n;
+cout<<zbroji(n);
+}
+
+ispiše sve brojeve od 1 do n
+
+#include <iostream>
+using namespace std;
+void ispisi(int n,int i=1){
+  if(i<=n){
+cout<<i<<' ';
+    ispisi(n,i+1);
+}
+}
+int main()
+{
+int n;
+cin>>n;
+ispisi(n);
+}
+    
+ zbroji znamenke nekog broja
+
+        #include <iostream>
+    using namespace std;
+    int ispisi(int n){
+    if(n==0)
+     return 0;
+    else
+        return n%10+ispisi(n/10);
+    }
+    int main()
+    {
+    int n;
+    cin>>n;
+    cout<<ispisi(n);
+    }
+
+  ispiše prvih n parnih brojeva
+
+  #include <iostream>
+using namespace std;
+void ispisi(int n,int i=2){
+if(i!=n){
+    cout<<i<<' ';
+    ispisi(n,i+2);
+}
+}
+int main()
+{
+int n;
+cin>>n;
+ispisi(n);
+}
+
+  
