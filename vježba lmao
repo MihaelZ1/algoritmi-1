@@ -1,3 +1,67 @@
+pronalazi najveći zajednički djelitelj
+
+#include <iostream>
+
+using namespace std;
+int NZD(int a,int b){
+if(b==0)
+    return a;
+return NZD(a,a%b);
+
+}
+
+int main()
+{
+int broj;
+int drugi;
+cin>>broj>>drugi;
+cout<<NZD(broj,drugi);
+}
+
+
+broji znamenke broja
+
+#include <iostream>
+
+using namespace std;
+int prebroji(int n,int brojac=0){
+if(n<10)
+    return brojac+1;
+    return prebroji(n/10,brojac+1);
+
+
+}
+int main()
+{
+int broj;
+cin>>broj;
+cout<<prebroji(broj);
+}
+
+
+
+kvadrira
+
+#include <iostream>
+
+using namespace std;
+int kvadriraj(int broj,int stupanj){
+if(stupanj==0)
+    return 1;
+if(stupanj==1)
+    return broj;
+    return broj*kvadriraj(broj,stupanj-1);
+}
+
+int main()
+{
+int broj;
+int stupanj;
+cin>>broj>>stupanj;
+cout<<kvadriraj(broj,stupanj);
+}
+
+
 provjeri sadrži li broj samo parne znamenke
 
 #include <iostream>
