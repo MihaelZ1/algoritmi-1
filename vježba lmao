@@ -1,3 +1,23 @@
+računa faktorijelu broja 
+
+#include <iostream>
+
+using namespace std;
+int faktorijela(int n){
+if(n==1)
+    return 1;
+    else
+    return n*faktorijela(n-1);
+}
+int main()
+{
+int b;
+cin>>b;
+cout<<faktorijela(b);
+return 0;
+}
+
+
 pronalazi najveći zajednički djelitelj
 
 #include <iostream>
