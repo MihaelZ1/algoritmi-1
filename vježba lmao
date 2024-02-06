@@ -1,3 +1,23 @@
+okrene broj
+
+#include <iostream>
+
+using namespace std;
+int obrni(int n,int obrnuti=0){
+if(n==0)
+    return obrnuti;
+else
+    return obrni(n/10,obrnuti*10+n%10);
+}
+int main()
+{
+int broj;
+cin>>broj;
+cout<<obrni(broj);
+
+}
+
+
 pretvori sva mala slova u velika
 
 #include <iostream>
