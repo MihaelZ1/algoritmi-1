@@ -1,3 +1,25 @@
+provjeri sadrži li broj samo parne znamenke
+
+#include <iostream>
+
+using namespace std;
+bool sadrzi_parne(int n){
+if(n==0)
+    return true;
+if((n%10)%2!=0)
+    return false;
+ return sadrzi_parne(n/10);
+}
+
+int main()
+{
+int broj;
+cin>>broj;
+cout<<sadrzi_parne(broj);
+return 0;
+}
+
+
 okrene broj
 
 #include <iostream>
