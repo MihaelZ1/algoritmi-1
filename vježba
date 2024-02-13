@@ -1,0 +1,46 @@
+provjeri je li prva znamenka broja parna ako je vrati 3 ako je vrati -2
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int provjera(int broj) {
+    if (broj < 10) {
+        if (broj % 2 == 0)
+            return 3;
+        else
+            return -2;
+    } else {
+        return provjera(broj / 10);
+    }
+}
+
+int main() {
+    int broj;
+    cin >> broj;
+    cout << provjera(broj);
+    return 0;
+}
+
+
+pretvori sve znakove u # ako nisu velika slova
+
+      #include <iostream>
+#include <cmath>
+using namespace std;
+void pretvori(char*polje){
+if(*polje=='\0')
+    return ;
+if(!(*polje>='A'&&*polje<='Z'))
+    *polje='#';
+cout<<*polje;
+pretvori(polje+1);
+}
+
+int main()
+{
+string polje="danweoN3OIR2Nobgoen903HR9";
+pretvori(&polje[0]);
+}
+
+  
