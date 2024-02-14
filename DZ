@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+struct Ljudovi{
+string ime;
+int broj;
+};
+
+int main() {
+Ljudovi covek[100];
+int brojac=0;
+int odabir;
+int trazipobroju;
+while(1){
+cout<<"1 Unesi novog covjeka"<<endl<<"2 Ispisi sve ljude"<<endl<<"3 Trazi po broju"<<endl<<"4 Izadji"<<endl;
+cout<<"donesite odluku: ";
+cin>>odabir;
+cout<<endl;
+if(odabir==1){
+        cout<<"Unesite novog covjeka: ";
+  cin>>covek[brojac].ime>>covek[brojac].broj;
+    brojac++;
+
+    cout<<endl;
+    continue;
+}
+
+else if(odabir==2){
+cout<<"Imenik: "<<endl;
+for(int i=0;i<brojac;i++){
+  cout<<covek[i].ime<<"  "<<covek[i].broj<<endl;
+}
+    cout<<endl;
+    continue;
+}
+
+else if(odabir==3){
+        bool postoji =false;
+        cout<<"Unesite broj za pretrazivanje: ";
+    cin>>trazipobroju;
+    for(int i=0;i<brojac;i++){
+
+    if(covek[i].broj == trazipobroju){
+        postoji=true;
+        cout<<"Osoba postoji U imeniku "<<covek[i].ime;
+    }
+    }
+    if(!postoji)
+        cout<<"Nema ga";
+          cout<<endl;
+          continue;
+}
+
+else if(odabir==4){
+    break;
+}
+}
+return 0;
+}
