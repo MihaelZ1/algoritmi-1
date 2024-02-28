@@ -1,0 +1,110 @@
+#include <iostream>
+
+using namespace std;
+
+struct cvor{
+int id;
+int te;
+cvor *Lj=NULL;
+cvor *De=NULL;
+};
+int vrati(cvor *c){
+    if(c==NULL)
+        return 0;
+int lijevo=(*c).te+vrati((*c).Lj);
+int desno=(*c).te+vrati((*c).De);
+if(lijevo>desno)
+    return lijevo;
+else if(desno>lijevo)
+    return desno;
+}
+int main()
+{
+cvor c1,c2,c3,c4,c5,c6,c7;
+c1.id=1;
+c2.id=2;
+c3.id=3;
+c4.id=4;
+c5.id=5;
+c6.id=6;
+c7.id=7;
+
+c1.te=3;
+c2.te=7;
+c3.te=2;
+c4.te=12;
+c5.te=24;
+c6.te=18;
+c7.te=1;
+
+c1.Lj=&c2;
+c1.De=&c3;
+c2.De=&c4;
+c2.Lj=&c5;
+c3.Lj=&c4;
+c3.De=&c6;
+c4.Lj=&c5;
+c4.De=&c6;
+c5.De=&c7;
+c6.Lj=&c7;
+cout<<vrati(&c1);
+}
+
+//////////////////
+#include <iostream>
+
+using namespace std;
+
+struct cvor{
+int id;
+int te;
+cvor *Lj=NULL;
+cvor *De=NULL;
+};
+int vrati(cvor *c,cvor *z){
+if(c==z)
+    return (*c).te;
+    if((*c)=0,(*z)=0)
+            return 0;
+int lijevo=0;
+if((*c).Lj!=NULL)
+    lijevo=(vrati)
+int desno=0;
+if((*c).De!=NULL)
+    lijevo=(vrati(*c).De
+if(lijevo>desno)
+    return lijevo;
+else if(desno>lijevo)
+    return desno;
+}
+int main()
+{
+cvor c1,c2,c3,c4,c5,c6,c7;
+c1.id=1;
+c2.id=2;
+c3.id=3;
+c4.id=4;
+c5.id=5;
+c6.id=6;
+c7.id=7;
+
+c1.te=3;
+c2.te=7;
+c3.te=2;
+c4.te=12;
+c5.te=24;
+c6.te=18;
+c7.te=1;
+
+c1.Lj=&c2;
+c1.De=&c3;
+c2.De=&c4;
+c2.Lj=&c5;
+c3.Lj=&c4;
+c3.De=&c6;
+c4.Lj=&c5;
+c4.De=&c6;
+c5.De=&c7;
+c6.Lj=&c7;
+cout<<"Cijena je: "<<vrati(&c1);
+}
