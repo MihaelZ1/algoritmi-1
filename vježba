@@ -3,22 +3,29 @@ vrati kolko se put slovo ponavlja u rečenici ako se ne ponavlja vrati -1
 #include <iostream>
 
 using namespace std;
-int vratine(char *polje, char trazeno){
+int vrati(char *polje,char znak){
 if(*polje=='\0')
     return -1;
-if(*polje==trazeno)
-    return 1+vratine(polje+1,trazeno);
+if(*polje==znak)
+    return 1+vrati(polje+1,znak);
 else
-    return vratine(polje+1,trazeno);
+    return vrati(polje+1,znak);
+
 }
 
 int main()
 {
-string polje="David jede sarmu jer mu je fina i jer mu daje proteina";
-char slovo;
-cin>>slovo;
-cout<<vratine(&polje[0],slovo);
+char polje[200];
+gets(polje);
+char znak;
+cin>>znak;
+if(vrati(&polje[0],znak)<0){
+    cout<<vrati(&polje[0],znak);
 }
+else
+cout<<1+vrati(&polje[0],znak);
+}
+
 
 
 provjeri je li prva znamenka broja parna ako je vrati 3 ako je vrati -2
