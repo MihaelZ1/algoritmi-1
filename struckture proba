@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+struct osoba{
+    string ime;
+    string prezime;
+    int god;
+    string mjesto;
+    string ulica;
+    int kbr;
+};
+void ispis(osoba os){
+    cout<<"O osobi: "<<endl;
+        cout<<"Ime: "<<os.ime<<endl;
+        cout<<"Prezime: "<<os.prezime<<endl;
+        cout<<"Godiste: "<<os.god<<endl;
+        cout<<"Mjesto: "<<os.mjesto<<endl;
+        cout<<"Ulica: "<<os.ulica<<endl;
+        cout<<"Kbr: "<<os.kbr<<endl;
+        cout<<endl;
+}
+int main()
+{
+    osoba polje[5];
+    for(int i=0;i<5;i++){
+        cout<<"Unesi ime osobe: "<<endl;
+        cin>>polje[i].ime;
+        cout<<"Unesi prezime osobe: "<<endl;
+        cin>>polje[i].prezime;
+        cout<<"Unesi godiste: "<<endl;
+        cin>>polje[i].god;
+        cout<<"Unesite mjesto: "<<endl;
+        cin>>polje[i].mjesto;
+        cout<<"Unesite ulicu: "<<endl;
+        cin>>polje[i].ulica;
+        cout<<"Unesite kbr: "<<endl;
+        cin>>polje[i].kbr;
+        cout<<endl<<endl;
+        ispis(polje[i]);
+    }
+    for(int i=0;i<5;i++){
+            int najmanjii=i;
+        for(int j=i;j<5;j++){
+            if(polje[j].god<polje[najmanjii].god){
+                najmanjii=j;
+            }
+        }
+        swap(polje[i],polje[najmanjii]);
+    }
+    cout<<"ISPIS po godistu"<<endl<<endl;
+    for(int i=0;i<5;i++){
+        ispis(polje[i]);
+    }
+    cout<<endl<<endl;
+
+    for(int i=0;i<5;i++){
+            int najmanjij=i;
+        for(int j=i;j<5;j++){
+            if(polje[j].ulica<polje[najmanjij].ulica){
+                najmanjij=j;
+            }
+            else if(polje[j].ulica==polje[najmanjij].ulica){
+              for(int i=0;i<5;i++){
+            int najmanji=i;
+        for(int j=i;j<5;j++){
+            if(polje[j].kbr<polje[najmanji].kbr){
+                najmanji=j;
+            }
+        }
+        swap(polje[i],polje[najmanji]);
+    }
+            }
+        }
+        swap(polje[i],polje[najmanjij]);
+    }
+    cout<<"ISPIS po ulici"<<endl<<endl;
+    for(int i=0;i<5;i++){
+        ispis(polje[i]);
+    }
+}
