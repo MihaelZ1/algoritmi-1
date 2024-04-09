@@ -5,12 +5,18 @@ struct osoba{
     string ime;
     string prezime;
     int god;
+    string mjesto;
+    string ulica;
+    int kbr;
 };
 void ispis(osoba os){
     cout<<"O osobi: "<<endl;
         cout<<"Ime: "<<os.ime<<endl;
         cout<<"Prezime: "<<os.prezime<<endl;
         cout<<"Godiste: "<<os.god<<endl;
+        cout<<"Mjesto: "<<os.mjesto<<endl;
+        cout<<"Ulica: "<<os.ulica<<endl;
+        cout<<"Kbr: "<<os.kbr<<endl;
         cout<<endl;
 }
 int main()
@@ -23,6 +29,12 @@ int main()
         cin>>polje[i].prezime;
         cout<<"Unesi godiste: "<<endl;
         cin>>polje[i].god;
+        cout<<"Unesite mjesto: "<<endl;
+        cin>>polje[i].mjesto;
+        cout<<"Unesite ulicu: "<<endl;
+        cin>>polje[i].ulica;
+        cout<<"Unesite kbr: "<<endl;
+        cin>>polje[i].kbr;
         cout<<endl<<endl;
         ispis(polje[i]);
     }
@@ -35,7 +47,35 @@ int main()
         }
         swap(polje[i],polje[najmanjii]);
     }
-    cout<<"ISPIS"<<endl;
+    cout<<"ISPIS po godistu"<<endl<<endl;
+    for(int i=0;i<5;i++){
+        ispis(polje[i]);
+    }
+    cout<<endl<<endl;
+    for(int i=0;i<5;i++){
+            int najmanji=i;
+        for(int j=i;j<5;j++){
+            if(polje[j].kbr<polje[najmanji].kbr){
+                najmanji=j;
+            }
+        }
+        swap(polje[i],polje[najmanji]);
+    }
+    cout<<"ISPIS po kbr"<<endl<<endl;
+    for(int i=0;i<5;i++){
+        ispis(polje[i]);
+    }
+    cout<<endl<<endl;
+    for(int i=0;i<5;i++){
+            int najmanjij=i;
+        for(int j=i;j<5;j++){
+            if(polje[j].ulica<polje[najmanjij].ulica){
+                najmanjij=j;
+            }
+        }
+        swap(polje[i],polje[najmanjij]);
+    }
+    cout<<"ISPIS po ulici"<<endl<<endl;
     for(int i=0;i<5;i++){
         ispis(polje[i]);
     }
