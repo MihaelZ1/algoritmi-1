@@ -1,0 +1,48 @@
+
+#include <iostream>
+
+using namespace std;
+struct osoba{
+    string ime;
+    string prezime;
+    int god;
+};
+void ispis(osoba os){
+    cout<<"O osobi: "<<endl;
+        cout<<"Ime: "<<os.ime<<endl;
+        cout<<"Prezime: "<<os.prezime<<endl;
+        cout<<"Godiste: "<<os.god<<endl;
+        cout<<endl;
+}
+int stariji(osoba o1, osoba o2){
+    if(o1.god<o2.god)
+        return 1;
+    else if(o1.god>o2.god)
+        return -1;
+        else
+            return 0;
+}
+
+int main()
+{
+    osoba polje[100];
+        cout<<"Unesi ime osobe: "<<endl;
+        cin>>polje[1].ime;
+        cout<<"Unesi prezime osobe: "<<endl;
+        cin>>polje[1].prezime;
+        cout<<"Unesi godiste: "<<endl;
+        cin>>polje[1].god;
+        cout<<endl<<endl;
+        ispis(polje[1]);
+
+        cout<<"Unesi ime osobe: "<<endl;
+        cin>>polje[2].ime;
+        cout<<"Unesi prezime osobe: "<<endl;
+        cin>>polje[2].prezime;
+        cout<<"Unesi godiste: "<<endl;
+        cin>>polje[2].god;
+        cout<<endl<<endl;
+        ispis(polje[2]);
+
+        cout<<stariji(polje[1], polje[2]);
+}
