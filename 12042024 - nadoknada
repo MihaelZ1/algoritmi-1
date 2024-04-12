@@ -1,4 +1,4 @@
-GRUPA A
+RUPA A
 
 
 1. Napiši strukturu koja predstavlja Vozilo. Vozilo ima svojstva: Proizvođač, Model, GodinaProizvodnje, Snaga. Napiši funkciju koja služi za lijepi ispis parametra nekog vozila na ekran.
@@ -15,3 +15,54 @@ GRUPA B
 3. Napiši funkciju koja od korisnika traži unos osobe i adrese. Unesene osobe spremaju se u polje od najviše 10 osoba.
 4. Kreiraj strukturu koja predstavlja čvor koji potencijalno ima 100 podčvorova. Napiši funkciju koja vrati koliko čvorova ima u cijelom stablu.
 -rez-
+
+
+#include <iostream>
+
+
+using namespace std;
+struct vozilo{
+string proizvodac;
+string model;
+int godinapro;
+int snaga;
+};
+
+void lijepiIspis(vozilo vo){
+cout<<"Lijepi ispis o vozilu: "<<endl;
+cout<<"Proizvodac "<<vo.proizvodac<<endl;
+cout<<"Model "<<vo.model<<endl;
+cout<<"Godina proizvodnje "<<vo.godinapro<<endl;
+cout<<"Snaga "<<vo.snaga<<endl;
+cout<<endl<<endl;
+}
+
+int smanjisnagu(vozila voo){
+
+
+
+
+}
+
+
+int main()
+{
+vozilo polje[10];
+for(int i=0;i<10;i++){
+cout<<"Unesite ime proizvodaca: "<<endl;
+cin>>polje[i].proizvodac;
+cout<<"Unesite model: "<<endl;
+cin>>polje[i].model;
+cout<<"Unesite godinu proizvodnje: "<<endl;
+cin>>polje[i].godinapro;
+cout<<"Unesite snagu: "<<endl;
+cin>>polje[i].snaga;
+cout<<endl;
+
+}
+cout<<"ISPIS VOZILA: ";
+for(int i=0;i<10;i++){
+    lijepiIspis(polje[i]);
+}
+
+}
