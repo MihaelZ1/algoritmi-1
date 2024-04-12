@@ -1,0 +1,17 @@
+GRUPA A
+
+
+1. Napiši strukturu koja predstavlja Vozilo. Vozilo ima svojstva: Proizvođač, Model, GodinaProizvodnje, Snaga. Napiši funkciju koja služi za lijepi ispis parametra nekog vozila na ekran.
+2. Napiši funkciju kojua nekom vozilu smanjuje snagu za 1. Ako se snaga može smanjiti - vrati 1. Ako je snaga vozila nula, snaga se ne može smanjiti te je potrebno vratiti 0. Varijabla koja predstavlja vozilo deklarirana je u main funkciji.
+3. napiši program koji od korisnika traži unos vozila. Unesena vozila spremamo u polja. Neće biti više od 10 vozila.
+4. Napiši strukturu koja predstavlja čvor koji potencijalno ima tri podčvora. Napiši funkciju koja vrati koliko čvorova ima u nekom stablu. Čvorovi mogu pokazivati na prijašnje čvorove.
+-rez-
+
+GRUPA B
+
+
+1. Napiši strukturu koja predstavlja Osobu. Osoba ima ime te živi na nekoj Adresi. Adresa se sastoji od Naselje, ulica, kućni broj. Napiši funkciju za lijepi ispis parametara neke osobe. (svih podataka)
+2. Napiši funkciju koja neku osobu "preseli" na X kućnih brojeva bliže. Ako se osoba uspješno preselila vrati 1. inače vrati 0.
+3. Napiši funkciju koja od korisnika traži unos osobe i adrese. Unesene osobe spremaju se u polje od najviše 10 osoba.
+4. Kreiraj strukturu koja predstavlja čvor koji potencijalno ima 100 podčvorova. Napiši funkciju koja vrati koliko čvorova ima u cijelom stablu.
+-rez-
