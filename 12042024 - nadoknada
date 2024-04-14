@@ -74,3 +74,29 @@ return 0;
 }
  4.
 
+#include <iostream>
+
+using namespace std;
+
+struct Cvor {
+    int vrijednost;
+    struct Cvor *podcvor1;
+    struct Cvor *podcvor2;
+    struct Cvor *podcvor3;
+    struct Cvor *prethodni;
+};
+
+int broj_cvorova(struct Cvor *korijen) {
+    if (korijen == NULL)
+        return 0;
+    return 1 + broj_cvorova(korijen->podcvor1) + broj_cvorova(korijen->podcvor2) + broj_cvorova(korijen->podcvor3);
+}
+
+int main() {
+    struct Cvor *korijen = NULL;
+
+    int broj = broj_cvorova(korijen);
+    cout << "Broj cvorova u stablu: " << broj;
+
+    return 0;
+}
