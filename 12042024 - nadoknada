@@ -100,3 +100,64 @@ int main() {
 
     return 0;
 }
+
+
+GRUPA B 
+1-3
+#include <iostream>
+
+using namespace std;
+
+struct adresa{
+string naselje;
+string ulica;
+int kucni;
+};
+struct osoba{
+string ime;
+adresa Adresa;
+};
+void lijepiIspis(osoba os){
+cout<<"Ime: "<<os.ime<<endl;
+cout<<"Naselje: "<<os.Adresa.naselje<<endl;
+cout<<"Ulica: "<<os.Adresa.ulica<<endl;
+cout<<"Kucni broj: "<<os.Adresa.kucni<<endl;
+}
+bool preseli(osoba *osobe, string ime, int smanjenje) {
+for (int i = 0; i < 3; ++i) {
+if (osobe[i].ime == ime) {
+osobe[i].Adresa.kucni -= smanjenje;
+return true;
+}
+}
+return false;
+}
+int main(){
+osoba polje[3];
+for(int i=0;i<3;i++){
+cout<<"Ime: ";
+cin>>polje[i].ime;
+cout<<"Naselje: ";
+cin>>polje[i].Adresa.naselje;
+cout<<"Ulica: ";
+cin>>polje[i].Adresa.ulica;
+cout<<"Kucni broj: ";
+cin>>polje[i].Adresa.kucni;
+cout<<endl<<endl;
+}
+cout<<endl<<"Lijepi ispis: "<<endl;
+for(int i=0;i<3;i++){
+    lijepiIspis(polje[i]);
+    cout<<endl;
+}
+cout<<endl;
+string imeM="Marko";
+int kbr=2;
+cout<<preseli(&polje[0],imeM,kbr)<<endl;
+for(int i=0;i<3;i++){
+    lijepiIspis(polje[i]);
+    cout<<endl;
+}
+return 0;
+}
+4.
