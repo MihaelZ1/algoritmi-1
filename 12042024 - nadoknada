@@ -72,6 +72,52 @@ for(int i=0;i<3;i++){
 
 return 0;
 }
+
+1-2 
+#include <iostream>
+
+using namespace std;
+
+struct vozilo{
+string proizvodac;
+string model;
+int godina;
+int snaga;
+};
+
+void ispis(vozilo vo){
+cout<<"Proizvodac: "<<vo.proizvodac<<endl;
+cout<<"Model: "<<vo.model<<endl ;
+cout<<"Godina: "<<vo.godina<<endl;
+cout<<"Snaga: "<<vo.snaga<<endl;
+cout<<endl;
+}
+
+bool mozesmanjiti(vozilo *vo){
+if((*vo).snaga==0)
+    return false;
+else
+    (*vo).snaga--;
+return true ;
+
+}
+
+
+int main(){
+vozilo v1;
+v1.proizvodac="Honda";
+v1.model="Civic";
+v1.godina=1990;
+v1.snaga=1;
+ispis(v1);
+cout<<endl;
+cout<<mozesmanjiti(&v1)<<endl;
+ispis(v1);
+
+
+
+}
+
  4.
 
 #include <iostream>
