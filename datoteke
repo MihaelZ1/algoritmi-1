@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+FILE *datoteka;
+string neka= "kruska";
+datoteka=fopen("C:\\Users\\ucenik\\Desktop\\test.txt","a+");
+if(datoteka==NULL){
+ printf("GRESKA!!");
+}
+else{
+
+    fprintf(datoteka,"rijec=%s\n","jabuka");
+
+    fclose(datoteka);
+
+}
+
+return 0;
+
+}
