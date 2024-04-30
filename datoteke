@@ -23,3 +23,33 @@ else{
 return 0;
 
 }
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    FILE *datoteka;
+    datoteka=fopen("C:\\Users\\ucenik\\Desktop\\kalk.txt","a+");
+    int a,b,c;
+    cin>>a>>b;
+    c=a+b;
+    fprintf(datoteka, "%d + %d= %d \n",a,b,c);
+    int e,f,g;
+    while(fscanf(datoteka,"%d + %d= %d \n",&e,&f,&g)!=EOF){
+    cout<<e<<'+'<<f<<'='<<g<<endl;
+    }
+        fclose(datoteka);
+}
