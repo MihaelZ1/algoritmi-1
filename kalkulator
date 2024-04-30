@@ -1,0 +1,40 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+
+
+using namespace std;
+
+int main()
+{
+FILE *kalkulator;
+kalkulator=fopen("C:\\Users\\ucenik\\Desktop\\kalkulator.txt","w+");
+int a,b,c;
+char znak;
+
+while(znak!='c'){
+cout<<"Unesite zeljene brojke i akciju: ";
+cin>>a>>znak>>b;
+if(znak=='c'){
+    fclose(kalkulator);
+        break;
+}
+if(znak=='+'){
+    c=a+b;
+}
+if(znak=='-'){
+    c=a-b;
+}
+if(znak=='/'){
+    c=a/b;
+}
+if(znak=='*'){
+    c=a*b;
+}
+fprintf(kalkulator,"%d%c%d=%d\n",a,znak,b,c);
+
+
+}
+
+
+}
