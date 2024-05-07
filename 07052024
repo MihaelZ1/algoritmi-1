@@ -1,0 +1,191 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+FILE *nekaj;
+nekaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","w+");
+int a,b,c;
+for(int i=0;i<5000;i++){
+a=rand()%100;
+b=rand()%100;
+c=rand()%100;
+fprintf(nekaj,"%d %d %d\n",a,b,c);
+}
+fclose(nekaj);
+FILE *citaj; 
+int brojac=0;
+int d,f,g;
+citaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","r");
+while(fscanf(citaj,"%d %d %d\n",&d,&f,&g)!=EOF){
+if(d+f==g){
+    brojac+=1;
+}
+}
+fclose(citaj);
+cout<<brojac;
+}
+
+
+
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+struct poljeakoverjes{
+int a;
+int b;
+int c;
+};
+
+int main()
+{
+srand(time(0));
+FILE *nekaj;
+FILE *citaj;
+FILE *pisi;
+nekaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","w+");
+citaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","r");
+pisi=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","w+");
+int a,b,c;
+for(int i=0;i<10;i++){
+a=rand()%4;
+b=rand()%4;
+c=rand()%4;
+fprintf(nekaj,"%d %d %d\n",a,b,c);
+}
+fclose(nekaj);
+int brojac=0;
+int d,f,g;
+while(fscanf(citaj,"%d %d %d\n",&d,&f,&g)!=EOF){
+if(d+f==g){
+    brojac++;
+    fprintf(pisi,"%d %d %d %c\n",d,f,g,'T');
+}
+else{
+    fprintf(pisi,"%d %d %d %c\n",d,f,g,'N');
+}
+}
+cout<<brojac;
+fclose(citaj);
+fclose(pisi);
+
+}
+
+
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+struct polje{
+int broj1;
+char znak;
+int broj2;
+int zbroj;
+};
+
+int main()
+{
+srand(time(0));
+
+polje polje[4];
+
+FILE *nekaj;
+FILE *citaj;
+FILE *pisi;
+
+nekaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","w+");
+citaj=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","r");
+pisi=fopen("C:\\Users\\ucenik\\Desktop\\brojevi.txt","w+");
+
+int a,b,c;
+char znak;
+
+for(int i=0;i<10;i++){
+a=rand()%50;
+b=rand()%50;
+c=rand()%4;
+    if(c==0)
+        znak='+';
+    if(c==1)
+        znak='-';
+    if(c==2)
+        znak='/';
+    if(c==3)
+        znak='*';
+            fprintf(nekaj,"%d %c %d\n",a,znak,b);
+}
+fclose(nekaj);
+
+int d,f;
+int g;
+char oper;
+while(fscanf(citaj,"%d %c %d\n",&d,&oper,&f)!=EOF){
+
+if(oper=='+'){
+g=d+f;
+fprintf(pisi,"%d %c %d %c %d\n",d,oper,f,'=',g);
+}
+
+
+if(oper=='-'){
+g=d-f;
+fprintf(pisi,"%d %c %d %c %d\n",d,oper,f,'=',g);
+}
+
+
+if(oper=='/'){
+g=d/f;
+fprintf(pisi,"%d %c %d %c %d\n",d,oper,f,'=',g);
+}
+
+
+if(oper=='*'){
+g=d*f;
+fprintf(pisi,"%d %c %d %c %d\n",d,oper,f,'=',g);
+}
+
+
+for(int j=0;j<4;j++){
+polje[j]=fscanf(citaj,"%d %c %d %d\n",&d,&oper,&f,&g);
+}
+
+
+
+for(int i=0;i<10;i++){
+        a[i]=rand()%123;
+cout<<a[i]<<' ';
+}
+cout<<endl<<endl;
+int mini;
+for(int i=0;i<10;i++){
+mini=i;
+for(int j=i+1;j<10;j++){
+if(a[j]<a[mini]){
+mini=j;
+}
+}
+swap(a[i],a[mini]);
+for(int k=0;k<10;k++){
+cout<<a[k]<<' ';
+}
+cout<<endl;
+
+}
+
+
+
+}
+fclose(citaj);
+fclose(pisi);
+return 0;
+}
