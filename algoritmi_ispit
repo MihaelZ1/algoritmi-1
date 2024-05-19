@@ -1,0 +1,109 @@
+1.
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+FILE *datoteka;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\prvi.txt","w+");
+char slovo;
+while(true){
+cout<<"Unesite slovo: ";
+cin>>slovo;
+fprintf(datoteka,"%c\n",slovo);
+if(slovo>'k')
+    break;
+}
+fclose(datoteka);
+return 0;
+}
+
+
+
+
+
+
+2.
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+srand(time(0));
+FILE *datoteka;
+FILE *citaj;
+int brojac=0;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\drugi.txt","w+");
+citaj=fopen("C:\\Users\\barba\\Desktop\\drugi.txt","r");
+int broj;
+int trazeni;
+int pomocni_br=-1;
+int pomocni;
+cout<<"Unesite trazeni broj: ";
+cin>>trazeni;
+for(int i=0;i<100;i++){
+broj=rand()%100;
+fprintf(datoteka,"%d\n",broj);
+}
+fclose(datoteka);
+while(fscanf(citaj,"%d\n",&pomocni)!=EOF){
+    if(trazeni!=pomocni)
+            brojac++;
+    else if(trazeni==pomocni)
+        pomocni_br=brojac;
+
+}
+fclose(citaj);
+cout<<pomocni_br;
+}
+
+3.
+
+
+
+4.
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+FILE *datoteka;
+FILE *citaj;
+FILE *pisi;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\cetvrti.txt","w+");
+citaj=fopen("C:\\Users\\barba\\Desktop\\cetvrti.txt","r");
+pisi=fopen("C:\\Users\\barba\\Desktop\\cetvrti.txt","w+");
+int a,b,c;
+int d,e,f;
+
+
+for(int i=0;i<10;i++){
+a=rand()%10+90;
+b=rand()%10+90;
+c=rand()%10+90;
+fprintf(datoteka,"%d %d %d\n",a,b,c);
+}
+fclose(datoteka);
+while(fscanf(citaj,"%d %d %d\n",&d,&e,&f)!=EOF){
+    if(d>e && e>f)
+        fprintf(pisi,"%d %d %d %c\n",d,e,f,'T');
+    else
+        fprintf(pisi,"%d %d %d %c\n",d,e,f,'N');
+}
+return 0;
+}
+
+
