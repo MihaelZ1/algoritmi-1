@@ -48,27 +48,33 @@ int main(){
 using namespace std;
 int main()
 {
-srand(time(0));
-FILE *datoteka;
-FILE *citaj;
-char slovo;
-datoteka=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","w+");
-citaj=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","r");
-int broj;
-for(int i=0;i<5;i++){
-broj=rand()%26;
-slovo='a'+broj;
-fprintf(datoteka,"%c %d\n",slovo,broj);
+    srand(time(0));
+    FILE *datoteka;
+    FILE *citaj;
+    char slovo;
+    datoteka=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","w+");
+    citaj=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","r");
+    int broj;
+    for(int i=0;i<5;i++){
+    broj=rand()%26;
+    slovo='a'+broj;
+    fprintf(datoteka,"%c %d\n",slovo,broj);
 }
-fclose(datoteka);
-int zbrajaj=0;
-char pomoc;
-int broj2;
-while(fscanf(citaj,"%c %d\n",&pomoc,&broj2)!=EOF){
-    zbrajaj=zbrajaj+broj2;
+    fclose(datoteka);
+    int zbrajaj=0;
+    char pomoc;
+    int broj2;
+    int polje[26]{0};
+    while(fscanf(citaj,"%c %d\n",&pomoc,&broj2)!=EOF){
+    polje[pomoc-'a']+=broj2;
 }
-fclose(citaj);
-cout<<zbrajaj;
+    fclose(citaj);
+    char pomocni;
+    for(int i=0;i<26;i++){
+    pomocni='a'+i;
+    cout<<pomocni<<" = "<<polje[i]<<endl;
+}
+return 0;
 }
 
 
