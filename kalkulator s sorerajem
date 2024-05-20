@@ -1,0 +1,77 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+struct redak{
+int broj1;
+int broj2;
+char znak;
+int reza;
+
+};
+
+using namespace std;
+int main()
+{
+srand(time(0));
+redak susa[10];
+FILE *datoteka;
+FILE *cita;
+FILE *pise;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\kalkulator.txt","w+");
+cita=fopen("C:\\Users\\barba\\Desktop\\kalkulator.txt","r");
+pise=fopen("C:\\Users\\barba\\Desktop\\kalkulator.txt","w+");
+int prvi;
+int brojac=0;
+int drugi;
+int znak;
+for(int i=0;i<10;i++){
+prvi=rand()%15;
+drugi=rand()%15;
+znak=rand()%4;
+if(znak==0)
+        fprintf(datoteka,"%d + %d\n",prvi,drugi);
+if(znak==1)
+        fprintf(datoteka,"%d - %d\n",prvi,drugi);
+if(znak==2)
+        fprintf(datoteka,"%d * %d\n",prvi,drugi);
+if(znak==3)
+        fprintf(datoteka,"%d / %d\n",prvi,drugi);
+}
+fclose(datoteka);
+while(fscanf(cita,"%d %c %d\n",&susa[brojac].broj1,&susa[brojac].znak,&susa[brojac].broj2)!=EOF){
+    if(susa[brojac].znak=='+'){
+        susa[brojac].reza=susa[brojac].broj1+susa[brojac].broj2;
+}
+  if(susa[brojac].znak=='-'){
+        susa[brojac].reza=susa[brojac].broj1-susa[brojac].broj2;
+}
+  if(susa[brojac].znak=='*'){
+        susa[brojac].reza=susa[brojac].broj1*susa[brojac].broj2;
+}
+ if(susa[brojac].znak=='/'){
+        susa[brojac].reza=susa[brojac].broj1/susa[brojac].broj2;
+
+}
+brojac++;
+}
+fclose(cita);
+for(int i=0;i<9;i++){
+for(int j=0;j<9;j++){
+    if(susa[j].reza < susa[j+1].reza){
+        swap(susa[j],susa[j+1]);
+}
+}
+}
+for(int i=0;i<10;i++){
+   fprintf(pise,"%d %c %d = %d\n",susa[i].broj1,susa[i].znak,susa[i].broj2,susa[i].reza);
+
+
+}
+fclose(pise);
+
+return 0;
+}
+
+
+
