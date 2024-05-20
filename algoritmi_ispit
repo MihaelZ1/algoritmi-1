@@ -66,6 +66,50 @@ cout<<pomocni_br;
 
 3.
 
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+int main()
+{
+    srand(time(0));
+    FILE *datoteka;
+    FILE *citaj;
+    int broj;
+    char slovo1;
+    char slovo2;
+    datoteka=fopen("C:\\Users\\barba\\Desktop\\dfeg.txt","w+");
+    citaj=fopen("C:\\Users\\barba\\Desktop\\dfeg.txt","r");
+    for(int i=0;i<5;i++){
+    broj=rand()%10;
+    slovo1='a'+rand()%26;
+    slovo2='a'+rand()%26;
+    fprintf(datoteka,"%c %c %d\n",slovo1,slovo2,broj);
+}
+    fclose(datoteka);
+    int br;
+    char a;
+    char b;
+    int zbroj=0;
+    int polje[26]{0};
+    while(fscanf(citaj,"%c %c %d\n",&a,&b,&br)!=EOF){
+    polje[a-'a']+=br;
+    polje[b-'a']+=br;
+}
+fclose(citaj);
+    char drugo;
+    for(int i=0;i<26;i++){
+           drugo='a'+i;
+        cout<<drugo<<" = "<<polje[i]<<endl;
+
+    }
+return 0;
+}
+
+
+
 
 
 4.
