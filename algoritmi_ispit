@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 FILE *datoteka;
-datoteka=fopen("C:\\Users\\barba\\Desktop\\prvi.txt","w+");
+datoteka=fopen("C:\\Users\\barba\\Desktop\\prvi.txt","a+");
 char slovo;
 while(true){
 cout<<"Unesite slovo: ";
