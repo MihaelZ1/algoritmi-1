@@ -1,0 +1,116 @@
+2.
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main(){
+    srand(time(0));
+    FILE*datoteka;
+    FILE*citaj;
+    int sigurno=rand()%100;
+    int trazeni;
+    cout<<"Unesite trazeni: ";
+    cin>>trazeni;
+    datoteka=fopen("C:\\Users\\barba\\Desktop\\drugi_b.txt",w+");
+    citaj=fopen("C:\\Users\\barba\\Desktop\\drugi_b.txt","r");
+    int brojac=0;
+    int broj=0;
+    for(int i=0;i<100;i++){
+        if(i==sigurno){
+        fprintf(datoteka,"%d\n",trazeni);
+        }
+   broj=rand()%15;
+   fprintf(datoteka,"%d\n",broj);
+}
+    fclose(datoteka);
+    int pomoc;
+    while(fscanf(citaj,"%d\n",&pomoc)!=EOF){
+    if(pomoc==trazeni)
+        break;
+    else
+        brojac+=1;
+}
+    cout<<brojac+1;
+    return 0;
+}
+
+
+3.
+
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+int main()
+{
+srand(time(0));
+FILE *datoteka;
+FILE *citaj;
+char slovo;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","w+");
+citaj=fopen("C:\\Users\\barba\\Desktop\\treci_b.txt","r");
+int broj;
+for(int i=0;i<5;i++){
+broj=rand()%26;
+slovo='a'+broj;
+fprintf(datoteka,"%c %d\n",slovo,broj);
+}
+fclose(datoteka);
+int zbrajaj=0;
+char pomoc;
+int broj2;
+while(fscanf(citaj,"%c %d\n",&pomoc,&broj2)!=EOF){
+    zbrajaj=zbrajaj+broj2;
+}
+fclose(citaj);
+cout<<zbrajaj;
+}
+
+
+4.
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+using namespace std;
+int main()
+{
+srand(time(0));
+FILE *datoteka;
+FILE *cita;
+FILE *pise;
+datoteka=fopen("C:\\Users\\barba\\Desktop\\txt.txt","w+");
+cita=fopen("C:\\Users\\barba\\Desktop\\txt.txt","r");
+pise=fopen("C:\\Users\\barba\\Desktop\\txt.txt","w+");
+char slovo1;
+char slovo2;
+char slovo3;
+for(int i=0;i<50;i++){
+    slovo1='a'+rand()%26;
+    slovo2='a'+rand()%26;
+    slovo3='a'+rand()%26;
+    fprintf(datoteka,"%c %c %c\n",slovo1,slovo2,slovo3);
+}
+fclose(datoteka);
+char a,b,c;
+while((fscanf(cita,"%c %c %c\n",&a,&b,&c))!=EOF){
+if(a>b && b>c){
+    fprintf(pise,"%c %c %c %c\n",a,b,c,'T');
+}
+  else
+    fprintf(pise,"%c %c %c %c\n",a,b,c,'N');
+}
+fclose(cita);
+fclose(pise);
+return 0;
+}
+
+
+
+
