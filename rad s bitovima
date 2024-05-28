@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+char a,b,c;
+int x;
+a=20;
+b=~a;
+c=b++;
+x=~a&~(b|~c);
+cout<<x;
+}
+
+
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+unsigned int x=18;
+while(x){
+    printf("%d\n",x);
+    x=x>>2;
+
+}
+return 0;
+}
