@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_weight="2">
+
+    <!-- Naslov -->
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="TITLE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#8BC34A"
+        android:textColor="#000000"/>
+
+    <!-- Prvi red (Text1, Text2, Text3) -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#FFFF00"
+
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Text1"
+            android:gravity="center"
+            android:background="#FF0000"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Text2"
+            android:gravity="center"
+            android:background="#00FF00"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Text3"
+            android:gravity="center"
+            android:background="#0000FF"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Drugi red (Text4, Text5, i LinearLayout3) -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#00C853"
+
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Text4"
+            android:gravity="center"
+            android:background="#FF00FF"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Text5"
+            android:gravity="center"
+            android:background="#00FFFF"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Sivi okvir sa Text6 i Text7 -->
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:background="#555555"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:text="Text6"
+                android:gravity="center"
+                android:background="#FF00FF"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:text="Text7"
+                android:gravity="center"
+                android:background="#00FFFF"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
